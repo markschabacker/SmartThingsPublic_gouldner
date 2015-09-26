@@ -660,6 +660,11 @@ def setCoolingSetpoint(degrees) {
     //"st wattr 0x${device.deviceNetworkId} 1 0x201 0x11 0x29 {" + hex(celsius*100) + "}"
     //def setpointMode = physicalgraph.zwave.commands.thermostatsetpointv1.ThermostatSetpointSet.SETPOINT_TYPE_COOLING_1
     //setThermostatSetpointForMode(degreesInteger.toDouble(), setpointMode)
+
+    if(setModeOnSetPointChange) {
+        log.debug "setting mode on cooling set point change"
+        setThermostatMode("cool")
+    }
 }
 
 /*
