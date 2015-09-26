@@ -35,6 +35,7 @@ preferences {
             type: "paragraph", element: "paragraph"
     input("remoteCode", "number", title: "Remote Code", description: "The number of the remote to emulate")
     input("tempOffset", "enum", title: "Temp correction offset?", options: ["-5","-4","-3","-2","-1","0","1","2","3","4","5"])
+    input("setModeOnSetPointChange", "boolean", title: "Set Mode on Set Point Change", description: "Set the mode when specifying set points")
     input("shortName", "string", title: "Short Name for Home Page Temp Icon", description: "Short Name:")
 }
 
